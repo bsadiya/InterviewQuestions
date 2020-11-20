@@ -6,7 +6,7 @@ public class LinearSearch {
 
 	public static void main(String[] args) {
 		int[] a = {12,23,34,45,56,78,89};
-		int key = 56;
+		int key = 89;
 		
 		searchKey(a, key);
 		
@@ -22,7 +22,9 @@ public class LinearSearch {
 		for(int i = 0; i < a.length; i++) {
 			if(key == a[i]) {
 				System.out.println("Seach Key: "+key +" Found at Position : "+(i+1));
+				break;
 			}
+			System.out.println(i);
 		}
 	}
 

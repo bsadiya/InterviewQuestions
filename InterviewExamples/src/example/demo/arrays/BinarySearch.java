@@ -4,6 +4,18 @@ import java.util.Arrays;
 
 public class BinarySearch {
 
+//	Array shud be in Asc/des order
+	
+//	l
+//	1 2 3 4 5 6 7 8 9
+//	l		m-1	m		m+1 	h
+//	1 2 3 4     5      6 7 8 9
+//	l		h
+//	6 7 8 9 -- split
+//	
+//	6 7    8 9 
+//	8   9 
+	
 	public static void main(String[] args) {
 		int[] a = {1,2,3,4,5,6,7,8,9,10};
 		System.out.println(Arrays.toString(a));
@@ -26,6 +38,7 @@ public class BinarySearch {
 		if(first < last) {
 			int mid= (first+last)/2;
 			System.out.println("Medium Value: "+mid);
+			
 			if(key == a[mid]) return mid;
 			
 			if(key > a[mid]) {
@@ -50,8 +63,10 @@ public class BinarySearch {
 		int high = a.length-1;
 		
 		while(low < high) {
+			
 			int med = (low+high)/2;
 			System.out.println("Medium Value: "+med);
+			
 			if(key == a[med]) {
 				System.out.println("######Key Found..at "+a[med] ); return;
 			}
@@ -62,6 +77,7 @@ public class BinarySearch {
 				high = med-1;
 			}
 		}
+		System.out.println("Which Won't print..coz using return");
 	}
 
 	private static void myLogic(int[] a) {

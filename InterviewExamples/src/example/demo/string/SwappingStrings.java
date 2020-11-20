@@ -29,7 +29,7 @@ public class SwappingStrings {
         a = a + b; 
           System.out.println(a);
         // store intial string a in string b 
-        b = a.substring(0,a.length()-b.length()); 
+        b = a.substring(0,a.length()-b.length());  // (a+b).length - b.length
         System.out.println(b);
         // store initial string b in string a 
         a = a.substring(b.length()); 
